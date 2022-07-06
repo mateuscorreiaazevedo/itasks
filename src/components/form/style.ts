@@ -16,9 +16,6 @@ export const Input = styled.input`
   font-size: 1rem;
   background: ${({ theme }) => theme.colors.secundary};
   color: ${({ theme }) => theme.colors.text};
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.text};
-  }
   &:focus {
     outline: none;
   }
