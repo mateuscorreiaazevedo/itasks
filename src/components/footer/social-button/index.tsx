@@ -8,7 +8,6 @@ export const SocialButtons = () => {
   return (
     <S.SocialWrapper >
       <div className='btn' onClick={() => setLinks(prev => !prev)}>
-        <span className="btn-alt">Social Links</span>
         <BsJustify />
       </div>
       {links && (

@@ -14,7 +14,7 @@ export const SocialWrapper = styled.div`
       font-size: .8rem;
       bottom: .5rem;
       right: 3.8rem;
-      z-index: 999;
+      z-index: -1;
     }
     svg {
       color: #fff;
@@ -39,6 +39,15 @@ export const SocialWrapper = styled.div`
       background: ${({ theme }) => theme.colors.terciary};
       .btn-alt {
         display: block;
+        animation: link-name 800ms;
+        @keyframes link-name {
+          from {
+            transform: translate(3.5rem)
+          }
+          to {
+            transform: translate(0);
+          }
+        }
       }
     }
 
