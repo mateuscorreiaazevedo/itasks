@@ -8,19 +8,29 @@ export const SocialButtons = () => {
   return (
     <S.SocialWrapper >
       <div className='btn' onClick={() => setLinks(prev => !prev)}>
+        <span className="btn-alt">Social Links</span>
         <BsJustify />
       </div>
       {links && (
         <div>
-          <a className='btn' href="https://www.linkedin.com/in/mateuscorreiaazevedo" target='_blank' rel="noreferrer">
-            <BsLinkedin />
-          </a>
-          <a className='btn' href="https://www.instagram.com/mateuscorreiaazevedo/" target='_blank' rel="noreferrer">
-            <BsInstagram />
-          </a>
-          <a className='btn' href="https://www.github.com/mateuscorreiaazevedo/" target='_blank' rel="noreferrer">
-            <BsGithub />
-          </a>
+          <div className='btn'>
+            <span className='btn-alt'>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/mateuscorreiaazevedo" target='_blank' rel="noreferrer">
+              <BsLinkedin />
+            </a>
+          </div>
+          <div className="btn">
+            <span className='btn-alt'>Instagram</span>
+            <a href="https://www.instagram.com/mateuscorreiaazevedo/" target='_blank' rel="noreferrer">
+              <BsInstagram />
+            </a>
+          </div>
+          <div className="btn">
+            <span className='btn-alt'>Repositore</span>
+            <a href="https://github.com/mateuscorreiaazevedo/itasks" target='_blank' rel="noreferrer">
+              <BsGithub />
+            </a>
+          </div>
         </div>)}
     </S.SocialWrapper>
   )

@@ -7,8 +7,8 @@ import { hash } from '../../utils/hashId'
 export const TaskForm = () => {
   const storageTask = localStorage.getItem('tasks')
   const [tasks, setTasks] = React.useState<Tasks[]>(storageTask ? JSON.parse(storageTask) : [])
-  const [task, setTask] = React.useState<string>('')
-  const [done] = React.useState<boolean>(false)
+  const [task, setTask] = React.useState('')
+  const [done] = React.useState(false)
   const [reload, setReload] = React.useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
