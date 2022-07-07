@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SocialWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 3.5rem;
   right: 3rem;
   z-index: 999;

@@ -15,9 +15,8 @@ export const MainPage = () => {
   return (
     <main>
       <TaskForm tasks={tasks} setReload={setReload} />
-      {tasks.map(todo => (
-        <TaskList {...todo} key={todo.id} />
-      ))}
+      <br />
+      <TaskList tasks={tasks} setReload={setReload} />
     </main>
   )
 }
