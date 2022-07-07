@@ -1,11 +1,11 @@
 import { Tasks } from '../../types/tasks'
 import { Wrap } from '../ui/wrapper'
-import React, { SetStateAction } from 'react'
+import React from 'react'
 import * as S from './style'
 
 interface Props {
   tasks: Tasks[]
-  setReload: React.Dispatch<SetStateAction<boolean>>
+  setReload: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const TaskList: React.FC<Props> = ({ setReload, tasks }) => {

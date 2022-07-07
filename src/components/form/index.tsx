@@ -1,4 +1,4 @@
-import React, { SetStateAction } from 'react'
+import React from 'react'
 import { Tasks } from '../../types/tasks'
 import { hash } from '../../utils/hashId'
 import { Wrap } from '../ui/wrapper'
@@ -6,8 +6,8 @@ import * as S from './style'
 
 type Props = {
   tasks: Tasks[]
-  setTasks?: React.Dispatch<SetStateAction<Tasks[]>>
-  setReload: React.Dispatch<SetStateAction<boolean>>
+  setTasks?: React.Dispatch<React.SetStateAction<Tasks[]>>
+  setReload: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const TaskForm: React.FC<Props> = ({ tasks, setReload }) => {
