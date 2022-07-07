@@ -6,8 +6,8 @@ import light from '../../assets/style/theme/light'
 import dark from '../../assets/style/theme/dark'
 import { Header } from '../header'
 import { Footer } from '../footer'
-import { TaskForm } from '../form'
 import React from 'react'
+import { MainPage } from '../../pages/main-page'
 
 export default function App () {
   const [theme, setTheme] = localStorageTheme<DefaultTheme>('theme', light)
@@ -20,7 +20,7 @@ export default function App () {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header />
-      <TaskForm />
+      <MainPage />
       <SocialButtons />
       <Footer change={handleTheme} />
     </ThemeProvider>
