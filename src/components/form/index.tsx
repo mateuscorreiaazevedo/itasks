@@ -12,7 +12,6 @@ type Props = {
 
 export const TaskForm: React.FC<Props> = ({ tasks, setReload }) => {
   const [task, setTask] = React.useState('')
-  const [done] = React.useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -20,7 +19,7 @@ export const TaskForm: React.FC<Props> = ({ tasks, setReload }) => {
     const id = await hash()
     localStorage.setItem('tasks', JSON.stringify([
       ...tasks,
-      { id, task, done }
+      { id, task, done: false }
     ]))
     setReload(prev => !prev)
     setTask('')

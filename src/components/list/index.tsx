@@ -19,7 +19,7 @@ export const TaskList: React.FC<Props> = ({ setReload, tasks }) => {
       {tasks.map(task => (
         <S.TaskContainer key={task.id}>
           <S.TaskText>
-            <input type="checkbox" />
+            <input type="checkbox"/>
             {task.task}
           </S.TaskText>
           <S.TaskBtn onClick={() => removeTask(task.id)}>X</S.TaskBtn>
