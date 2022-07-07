@@ -5,9 +5,16 @@ import * as S from './style'
 export const SocialButtons = () => {
   const [links, setLinks] = React.useState<boolean>(false)
 
+  const openSocialLinks = () => {
+    setLinks(prev => !prev)
+    setTimeout(() => {
+      setLinks(prev => !prev)
+    }, 15000)
+  }
+
   return (
     <S.SocialWrapper >
-      <div className='btn' onClick={() => setLinks(prev => !prev)}>
+      <div className='btn' onClick={openSocialLinks}>
         <BsJustify />
       </div>
       {links && (
