@@ -8,8 +8,8 @@ export const SocialButtons = () => {
   const openSocialLinks = () => {
     setLinks(prev => !prev)
     setTimeout(() => {
-      setLinks(prev => !prev)
-    }, 15000)
+      setLinks(false)
+    }, 10000)
   }
 
   return (
