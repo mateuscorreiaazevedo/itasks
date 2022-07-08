@@ -1,29 +1,16 @@
 import React from 'react'
+import { useNewTask } from '../../hooks/useNewTask'
 import { Tasks } from '../../types/tasks'
-import { hash } from '../../utils/hashId'
 import { Wrap } from '../ui/wrapper'
 import * as S from './style'
 
 type Props = {
   tasks: Tasks[]
-  setTasks?: React.Dispatch<React.SetStateAction<Tasks[]>>
   setReload: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const TaskForm: React.FC<Props> = ({ tasks, setReload }) => {
-  const [task, setTask] = React.useState('')
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
-    const id = await hash()
-    localStorage.setItem('tasks', JSON.stringify([
-      ...tasks,
-      { id, task, done: false }
-    ]))
-    setReload(prev => !prev)
-    setTask('')
-  }
+  const { handleSubmit, setTask, task } = useNewTask({ tasks, refresh: setReload })
 
   return (
     <Wrap>
