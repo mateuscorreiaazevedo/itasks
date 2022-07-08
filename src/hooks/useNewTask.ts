@@ -1,6 +1,7 @@
 import { Dispatch, FormEvent, SetStateAction, useState } from 'react'
 import { Tasks } from '../types/tasks'
 import { hash } from '../utils/hashId'
+import { setLocalStorage } from '../utils/setLocalStorage'
 
 type Props = {
   tasks: Tasks[]
@@ -15,10 +16,7 @@ export function useNewTask ({ tasks, refresh }: Props) {
 
     const id = await hash()
 
-    localStorage.setItem('tasks', JSON.stringify([
-      ...tasks,
-      { id, task, done: false }
-    ]))
+    setLocalStorage([...tasks, { id, task, done: false }])
     setTask('')
     refresh(prev => !prev)
   }
