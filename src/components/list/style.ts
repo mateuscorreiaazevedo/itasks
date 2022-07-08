@@ -8,13 +8,14 @@ export const TaskContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  input {
+    padding-top: .5rem;
+    margin-right: 1rem;
+  }
 `
 export const TaskText = styled.span`
-  input {
-    margin-right: .5rem;
-  }
   font-size: .9rem;
+  font-weight: 600;
 `
 export const TaskBtn = styled.button`
   cursor: pointer;
