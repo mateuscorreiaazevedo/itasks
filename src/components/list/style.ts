@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const TaskContainer = styled.div`
   background: ${({ theme }) => theme.colors.secundary};
-  padding: .5rem 2rem;
-  margin: .5rem 0;
+  padding: .8rem 2rem;
+  margin-bottom: 1rem;
   border-radius: .5rem;
   display: flex;
   justify-content: space-between;

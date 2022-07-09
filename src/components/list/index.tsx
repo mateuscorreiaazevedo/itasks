@@ -1,8 +1,8 @@
-import { Tasks } from '../../types/tasks'
-import { Wrap } from '../ui/wrapper'
-import React from 'react'
-import * as S from './style'
 import { useAlteredTask } from '../../hooks/useAlteredTask'
+import { AiOutlineClose } from 'react-icons/ai'
+import { Tasks } from '../../types/tasks'
+import * as S from './style'
+import React from 'react'
 
 interface Props {
   tasks: Tasks[]
@@ -16,7 +16,7 @@ export const TaskList: React.FC<Props> = ({ setReload, tasks }) => {
   })
 
   return (
-    <Wrap>
+    <>
       {tasks.map(task => (
         <S.TaskContainer key={task.id}>
           <div>
@@ -29,9 +29,11 @@ export const TaskList: React.FC<Props> = ({ setReload, tasks }) => {
               {task.task}
             </S.TaskText>
           </div>
-          <S.TaskBtn onClick={() => removeTask(task.id)}>X</S.TaskBtn>
+          <S.TaskBtn onClick={() => removeTask(task.id)}>
+            <AiOutlineClose />
+          </S.TaskBtn>
         </S.TaskContainer>
       ))}
-    </Wrap>
+    </>
   )
 }
