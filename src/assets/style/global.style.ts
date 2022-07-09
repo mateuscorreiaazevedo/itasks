@@ -7,7 +7,6 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    /* position: relative; */
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     background: ${p => p.theme.colors.background};
