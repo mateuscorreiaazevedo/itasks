@@ -21,11 +21,12 @@ export const TaskList: React.FC<Props> = ({ setReload, tasks }) => {
         <S.TaskContainer key={task.id}>
           <div>
             <input
-              type="checkbox"
               onClick={(e) => checkedTask(e, task.id)}
               defaultChecked={task.done}
+              type="checkbox"
+              id={task.id}
             />
-            <S.TaskText isChecked={task.done} >{task.task}</S.TaskText>
+            <S.TaskText isChecked={task.done} htmlFor={task.id}>{task.task}</S.TaskText>
           </div>
           <S.TaskBtn onClick={() => removeTask(task.id)}>
             <AiOutlineClose />

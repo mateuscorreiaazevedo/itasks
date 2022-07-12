@@ -17,7 +17,8 @@ export const TaskContainer = styled.div`
     margin-right: 1rem;
   }
 `
-export const TaskText = styled.span`
+export const TaskText = styled.label`
+  cursor: pointer;
   font-size: .9rem;
   font-weight: 600;
   text-decoration: ${({ isChecked }: Props) => isChecked ? 'line-through' : 'none'};
