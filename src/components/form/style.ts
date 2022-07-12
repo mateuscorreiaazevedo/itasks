@@ -4,6 +4,7 @@ export const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 `
 
 export const Input = styled.input`
@@ -11,7 +12,7 @@ export const Input = styled.input`
   height: 2rem;
   margin-top: 3.5rem;
   border: none;
-  padding: 0 1rem;
+  padding: 1.5rem;
   border-radius: .5rem;
   font-size: 1rem;
   background: ${({ theme }) => theme.colors.secundary};

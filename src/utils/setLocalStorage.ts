@@ -1,3 +1,3 @@
-export function setLocalStorage (fn: any) {
+export function setTaskStorage (fn: any) {
   localStorage.setItem('tasks', JSON.stringify(fn))
 }

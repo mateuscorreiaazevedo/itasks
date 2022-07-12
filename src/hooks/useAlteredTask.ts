@@ -1,6 +1,6 @@
 import { Dispatch, MouseEvent, SetStateAction } from 'react'
 import { Tasks } from '../types/tasks'
-import { setLocalStorage } from '../utils/setLocalStorage'
+import { setTaskStorage } from '../utils/setLocalStorage'
 
 interface Props {
   tasks: Tasks[]
@@ -16,13 +16,13 @@ export function useAlteredTask ({ tasks, refresh }: Props) {
       done: e.currentTarget.checked
     }
 
-    setLocalStorage(tasks)
+    setTaskStorage(tasks)
 
     refresh(prev => !prev)
   }
 
   const removeTask = (id: string | number) => {
-    setLocalStorage(tasks.filter(task => task.id !== id))
+    setTaskStorage(tasks.filter(task => task.id !== id))
     refresh(prev => !prev)
   }
 

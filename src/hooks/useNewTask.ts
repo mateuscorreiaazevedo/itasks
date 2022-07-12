@@ -1,7 +1,7 @@
 import { Dispatch, FormEvent, SetStateAction, useState } from 'react'
 import { Tasks } from '../types/tasks'
 import { hash } from '../utils/hashId'
-import { setLocalStorage } from '../utils/setLocalStorage'
+import { setTaskStorage } from '../utils/setLocalStorage'
 
 type Props = {
   tasks: Tasks[]
@@ -15,8 +15,7 @@ export function useNewTask ({ tasks, refresh }: Props) {
     e.preventDefault()
 
     const id = await hash()
-
-    setLocalStorage([...tasks, { id, task, done: false }])
+    setTaskStorage([...tasks, { id, task, done: false }])
     setTask('')
     refresh(prev => !prev)
   }

@@ -1,22 +1,32 @@
-import React from 'react'
-import { BsLinkedin, BsInstagram, BsGithub, BsJustify } from 'react-icons/bs'
-import * as S from './style'
+import { BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs'
+import { HiDotsVertical } from 'react-icons/hi'
 import env from '../../config/env'
+import * as S from './style'
+import React from 'react'
 
 export const SocialButtons = () => {
   const [links, setLinks] = React.useState<boolean>(false)
+  let timeOut: any = null
 
   const openSocialLinks = () => {
     setLinks(prev => !prev)
-    setTimeout(() => {
+    timeOut = setTimeout(() => {
       setLinks(false)
-    }, 10000)
+    }, 15000)
   }
+
+  React.useEffect(() => {
+    return () => {
+      if (timeOut) {
+        clearTimeout(timeOut)
+      }
+    }
+  }, [timeOut])
 
   return (
     <S.SocialWrapper >
       <div className='btn' onClick={openSocialLinks}>
-        <BsJustify />
+        <HiDotsVertical />
       </div>
       {links && (
         <div>

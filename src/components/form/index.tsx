@@ -18,6 +18,7 @@ export const TaskForm: React.FC<Props> = ({ tasks, setReload }) => {
         placeholder='Nova Tarefa'
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTask(e.target.value)}
         value={task}
+        required
         />
     </S.Form>
   )

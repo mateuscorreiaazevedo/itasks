@@ -18,7 +18,6 @@ export const MainPage = () => {
     <S.Main>
       <Wrap>
         <TaskForm tasks={tasks} setReload={setReload} />
-        <br />
         <TaskList tasks={tasks} setReload={setReload} />
       </Wrap>
     </S.Main>
