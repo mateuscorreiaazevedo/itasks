@@ -43,7 +43,7 @@ export const SocialButtons = () => {
             </a>
           </div>
           <div className="btn">
-            <span className='btn-alt'>Repositore</span>
+            <span className='btn-alt'>Repository</span>
             <a href={env.GITHUB} target='_blank' rel="noreferrer">
               <BsGithub />
             </a>
